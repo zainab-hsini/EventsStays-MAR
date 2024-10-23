@@ -2,12 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
+import os
 
 # URL of the webpage to scrape
 url = 'https://mawazine.ma/en/edition-2024/programme/'  
 
-# Your YouTube API key
-youtube_api_key = 'AIzaSyCXeD9uEXIlXv4zf8f8U2rv1ayZDRznYXw'  
+youtube_api_key = os.getenv('API_SECRET_KEY')  
 
 # Send a GET request to the webpage
 response = requests.get(url)
